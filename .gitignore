@@ -1,3 +1,22 @@
+.vscode
+.idea
+.DS_Store
+
+*.db
+
+data/images/
+data/disk-cache/
+data/flare_images/
+data/flare_images_preprocessed/
+data/lightning_logs/
+data/MNIST/
+
+
+
+########################
+## Github Template below
+########################
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
