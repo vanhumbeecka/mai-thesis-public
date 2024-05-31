@@ -117,4 +117,24 @@ The `src/helioviewer/download_cutouts.ipynb` jupiter notebook does 2 things:
 
 ## 6. PyTorch model training
 
+The `src/pytorch` folder contains scripts for training and evaluating the models discussed in the thesis.
 
+Given the large amount of data, you can run the `src/pytorch/prepcache.py` which will run the `HelioViewerDataset` class on the preprocessed images and store the results in a cache file. This will speed up the training process.
+
+Once done, you can run the `src/pytorch/training_loop.py` script to train the model. The script will output the model weights and hyperparameters in the `data/lightning_logs` folder, as well as corresponding `latent_kl_loss.txt` files that can be used to visualize the latent space of the model as described in the MNIST section above.
+
+Model selection is hardcoded in the `training_loop.py` file. You can change the model by changing the `model` variable in the script.
+
+```bash
+conda activate ml
+
+# show help
+python src/pytorch/training_loop.py --help
+
+# train the model with options
+python src/pytorch/training_loop.py --max-epochs 50 --batch-size 16 --beta 4
+```
+
+Afterwards, the training results inside the `data/lightning_logs` folder can be visualized with the `src/pytorch/plot_beta.ipynb` jupyter notebook, giving similar results as in the MNIST section, but now for the solar images.
+
+`src/pytorch/plot_generate.ipynb` notebook can be used for generating images from the learned models.
