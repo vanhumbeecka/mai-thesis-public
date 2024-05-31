@@ -10,6 +10,7 @@ data/flare_images/
 data/flare_images_preprocessed/
 data/lightning_logs/
 data/MNIST/
+data/mnist-experiments/
 
 
 
