@@ -135,6 +135,10 @@ python src/pytorch/training_loop.py --help
 python src/pytorch/training_loop.py --max-epochs 50 --batch-size 16 --beta 4
 ```
 
+### 6.1 Visualizations
+
 Afterwards, the training results inside the `data/lightning_logs` folder can be visualized with the `src/pytorch/plot_beta.ipynb` jupyter notebook, giving similar results as in the MNIST section, but now for the solar images.
 
 `src/pytorch/plot_generate.ipynb` notebook can be used for generating images from the learned models.
+
+⚠️ These notebooks are configured to look at the `data/lightning_logs` folder which you'll need to generate yourself. Alternatively, you can change the path in the notebooks to look at the `data/runs` folder in this repository which contains the results of the training on the preprocessed images, as discussed in the thesis.

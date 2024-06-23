@@ -1,0 +1,15 @@
+batch_size: 16
+beta: 20.0
+date: '2024-05-16 12:43:33'
+dropout: 0.0
+gamma: 0.99
+init_weights: true
+latent_size: 32
+learning_rate: 0.001
+max_epochs: 100
+model: ModelDepth6Layer4Dropout
+model_image_dim: !!python/tuple
+- 6
+- 512
+- 512
+weight_decay: 0.0
